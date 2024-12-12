@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is my first webpage</p>
+    <p>My first name is {{first_name}} </p>
+    <p>{{stuff|safe}}</p>
+
+    <h3>Favorite Pizza:</h3>
+
+    {% for toppings in favorite_pizza %}
+       {% if toppings == 41 %}
+          {{toppings + 100}}<br/> 
+        
+       {% else %}
+          {{toppings}}<br/>
+
+       {% endif %}
+
+    {% endfor %}
+
+    <br/><br/>
+    {{ favorite_pizza.0|reverse }}
+    
+</body>
+</html>
